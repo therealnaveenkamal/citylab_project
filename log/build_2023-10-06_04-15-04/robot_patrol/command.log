@@ -1,0 +1,6 @@
+Invoking command in '/home/user/ros2_ws/src/build/robot_patrol': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy _=/usr/bin/env /usr/bin/cmake /home/user/ros2_ws/src/robot_patrol -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/src/install/robot_patrol
+Invoked command in '/home/user/ros2_ws/src/build/robot_patrol' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy _=/usr/bin/env /usr/bin/cmake /home/user/ros2_ws/src/robot_patrol -DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/src/install/robot_patrol
+Invoking command in '/home/user/ros2_ws/src/build/robot_patrol': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy _=/usr/bin/env /usr/bin/cmake --build /home/user/ros2_ws/src/build/robot_patrol -- -j8 -l8
+Invoked command in '/home/user/ros2_ws/src/build/robot_patrol' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy _=/usr/bin/env /usr/bin/cmake --build /home/user/ros2_ws/src/build/robot_patrol -- -j8 -l8
+Invoking command in '/home/user/ros2_ws/src/build/robot_patrol': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy _=/usr/bin/env /usr/bin/cmake --install /home/user/ros2_ws/src/build/robot_patrol
+Invoked command in '/home/user/ros2_ws/src/build/robot_patrol' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/foxy _=/usr/bin/env /usr/bin/cmake --install /home/user/ros2_ws/src/build/robot_patrol

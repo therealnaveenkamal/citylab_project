@@ -1,0 +1,17 @@
+/home/user/ros2_ws/src/install/robot_patrol/lib/robot_patrol/patrol_node
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol//launch/start_patrolling.launch.py
+/home/user/ros2_ws/src/install/robot_patrol/share/ament_index/resource_index/package_run_dependencies/robot_patrol
+/home/user/ros2_ws/src/install/robot_patrol/share/ament_index/resource_index/parent_prefix_path/robot_patrol
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.sh
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.dsv
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/path.sh
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/path.dsv
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.bash
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.sh
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.zsh
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.dsv
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/package.dsv
+/home/user/ros2_ws/src/install/robot_patrol/share/ament_index/resource_index/packages/robot_patrol
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig.cmake
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig-version.cmake
+/home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/package.xml

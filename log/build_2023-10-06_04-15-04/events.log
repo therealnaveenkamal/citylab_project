@@ -1,0 +1,280 @@
+[0.000000] (-) TimerEvent: {}
+[0.000259] (robot_patrol) JobQueued: {'identifier': 'robot_patrol', 'dependencies': OrderedDict()}
+[0.000337] (robot_patrol) JobStarted: {'identifier': 'robot_patrol'}
+[0.016846] (robot_patrol) JobProgress: {'identifier': 'robot_patrol', 'progress': 'cmake'}
+[0.017561] (robot_patrol) Command: {'cmd': ['/usr/bin/cmake', '/home/user/ros2_ws/src/robot_patrol', '-DCMAKE_INSTALL_PREFIX=/home/user/ros2_ws/src/install/robot_patrol'], 'cwd': '/home/user/ros2_ws/src/build/robot_patrol', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=11.1 brand=tesla,driver>=418,driver<419 brand=tesla,driver>=440,driver<441 brand=tesla,driver>=450,driver<451'), ('NCCL_VERSION', '2.7.8'), ('PWD', '/home/user/ros2_ws/src/build/robot_patrol'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('CUDA_VERSION', '11.1.1'), ('AMENT_PREFIX_PATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge:/home/user/ros2_ws/install/robot_patrol:/opt/ros/foxy'), ('CMAKE_PREFIX_PATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge:/home/user/ros2_ws/install/robot_patrol:/opt/ros/foxy'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_xterm:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/simulations/ros2_sims_ws/install/ros1_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '714870'), ('SLOT_PREFIX', 'be34aeeb-4fc9-4b76-bf3f-f1d6fb7883af'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25184'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/foxy/bin:/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'foxy'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin'), ('NODE_VERSION', 'v6.11.2'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'foxy'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[0.092613] (-) TimerEvent: {}
+[0.193595] (-) TimerEvent: {}
+[0.294105] (-) TimerEvent: {}
+[0.394615] (-) TimerEvent: {}
+[0.495088] (-) TimerEvent: {}
+[0.595591] (-) TimerEvent: {}
+[0.696083] (-) TimerEvent: {}
+[0.797078] (-) TimerEvent: {}
+[0.897566] (-) TimerEvent: {}
+[0.997955] (-) TimerEvent: {}
+[1.098432] (-) TimerEvent: {}
+[1.198851] (-) TimerEvent: {}
+[1.299327] (-) TimerEvent: {}
+[1.399845] (-) TimerEvent: {}
+[1.500332] (-) TimerEvent: {}
+[1.600822] (-) TimerEvent: {}
+[1.701558] (-) TimerEvent: {}
+[1.802040] (-) TimerEvent: {}
+[1.902520] (-) TimerEvent: {}
+[2.002965] (-) TimerEvent: {}
+[2.103427] (-) TimerEvent: {}
+[2.203921] (-) TimerEvent: {}
+[2.304415] (-) TimerEvent: {}
+[2.404886] (-) TimerEvent: {}
+[2.505508] (-) TimerEvent: {}
+[2.606093] (-) TimerEvent: {}
+[2.706628] (-) TimerEvent: {}
+[2.807162] (-) TimerEvent: {}
+[2.907723] (-) TimerEvent: {}
+[3.008138] (-) TimerEvent: {}
+[3.108617] (-) TimerEvent: {}
+[3.209123] (-) TimerEvent: {}
+[3.309597] (-) TimerEvent: {}
+[3.410227] (-) TimerEvent: {}
+[3.510671] (-) TimerEvent: {}
+[3.611160] (-) TimerEvent: {}
+[3.711721] (-) TimerEvent: {}
+[3.812225] (-) TimerEvent: {}
+[3.867398] (robot_patrol) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.3.0\n'}
+[3.912359] (-) TimerEvent: {}
+[4.012768] (-) TimerEvent: {}
+[4.037295] (robot_patrol) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.3.0\n'}
+[4.112559] (robot_patrol) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[4.112864] (-) TimerEvent: {}
+[4.213200] (-) TimerEvent: {}
+[4.282224] (robot_patrol) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[4.284818] (robot_patrol) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[4.313385] (-) TimerEvent: {}
+[4.413801] (-) TimerEvent: {}
+[4.452318] (robot_patrol) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.468331] (robot_patrol) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.513915] (-) TimerEvent: {}
+[4.551894] (robot_patrol) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.558066] (robot_patrol) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[4.614082] (-) TimerEvent: {}
+[4.714490] (-) TimerEvent: {}
+[4.720104] (robot_patrol) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[4.723079] (robot_patrol) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.814679] (-) TimerEvent: {}
+[4.911508] (robot_patrol) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[4.914840] (-) TimerEvent: {}
+[4.930699] (robot_patrol) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[4.932046] (robot_patrol) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[4.952961] (robot_patrol) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[5.015016] (-) TimerEvent: {}
+[5.104852] (robot_patrol) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[5.105618] (robot_patrol) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[5.115186] (-) TimerEvent: {}
+[5.215579] (-) TimerEvent: {}
+[5.316059] (-) TimerEvent: {}
+[5.416614] (-) TimerEvent: {}
+[5.517134] (-) TimerEvent: {}
+[5.617598] (-) TimerEvent: {}
+[5.718060] (-) TimerEvent: {}
+[5.818582] (-) TimerEvent: {}
+[5.821094] (robot_patrol) StdoutLine: {'line': b'-- Found rclcpp: 2.4.0 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[5.918691] (-) TimerEvent: {}
+[6.019137] (-) TimerEvent: {}
+[6.066878] (robot_patrol) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.101119] (robot_patrol) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.119443] (-) TimerEvent: {}
+[6.219966] (-) TimerEvent: {}
+[6.320437] (-) TimerEvent: {}
+[6.420968] (-) TimerEvent: {}
+[6.521478] (-) TimerEvent: {}
+[6.622028] (-) TimerEvent: {}
+[6.722462] (-) TimerEvent: {}
+[6.822962] (-) TimerEvent: {}
+[6.923418] (-) TimerEvent: {}
+[6.939288] (robot_patrol) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[7.023585] (-) TimerEvent: {}
+[7.066114] (robot_patrol) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[7.123753] (-) TimerEvent: {}
+[7.224215] (-) TimerEvent: {}
+[7.324768] (-) TimerEvent: {}
+[7.370686] (robot_patrol) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[7.424944] (-) TimerEvent: {}
+[7.525472] (-) TimerEvent: {}
+[7.626585] (-) TimerEvent: {}
+[7.695750] (robot_patrol) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[7.705314] (robot_patrol) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[7.708970] (robot_patrol) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[7.726671] (-) TimerEvent: {}
+[7.827043] (-) TimerEvent: {}
+[7.884217] (robot_patrol) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[7.884689] (robot_patrol) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[7.927188] (-) TimerEvent: {}
+[8.027655] (-) TimerEvent: {}
+[8.048854] (robot_patrol) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[8.049212] (robot_patrol) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[8.127814] (-) TimerEvent: {}
+[8.187834] (robot_patrol) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[8.188210] (robot_patrol) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[8.227991] (-) TimerEvent: {}
+[8.328829] (-) TimerEvent: {}
+[8.353656] (robot_patrol) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[8.355084] (robot_patrol) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[8.428988] (-) TimerEvent: {}
+[8.529415] (-) TimerEvent: {}
+[8.629870] (-) TimerEvent: {}
+[8.730319] (-) TimerEvent: {}
+[8.830672] (-) TimerEvent: {}
+[8.896929] (robot_patrol) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.4 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[8.930856] (-) TimerEvent: {}
+[9.031364] (-) TimerEvent: {}
+[9.131847] (-) TimerEvent: {}
+[9.190946] (robot_patrol) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.6 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[9.232277] (-) TimerEvent: {}
+[9.333359] (-) TimerEvent: {}
+[9.430252] (robot_patrol) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[9.432304] (robot_patrol) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[9.432562] (robot_patrol) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[9.432704] (robot_patrol) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[9.433479] (-) TimerEvent: {}
+[9.434357] (robot_patrol) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[9.434616] (robot_patrol) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[9.436084] (robot_patrol) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[9.437181] (robot_patrol) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[9.446060] (robot_patrol) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[9.450486] (robot_patrol) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[9.450784] (robot_patrol) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[9.453438] (robot_patrol) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[9.469745] (robot_patrol) StdoutLine: {'line': b'-- Configuring done\n'}
+[9.489515] (robot_patrol) StdoutLine: {'line': b'-- Generating done\n'}
+[9.492337] (robot_patrol) StdoutLine: {'line': b'-- Build files have been written to: /home/user/ros2_ws/src/build/robot_patrol\n'}
+[9.505008] (robot_patrol) CommandEnded: {'returncode': 0}
+[9.505961] (robot_patrol) JobProgress: {'identifier': 'robot_patrol', 'progress': 'build'}
+[9.507051] (robot_patrol) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/user/ros2_ws/src/build/robot_patrol', '--', '-j8', '-l8'], 'cwd': '/home/user/ros2_ws/src/build/robot_patrol', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=11.1 brand=tesla,driver>=418,driver<419 brand=tesla,driver>=440,driver<441 brand=tesla,driver>=450,driver<451'), ('NCCL_VERSION', '2.7.8'), ('PWD', '/home/user/ros2_ws/src/build/robot_patrol'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('CUDA_VERSION', '11.1.1'), ('AMENT_PREFIX_PATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge:/home/user/ros2_ws/install/robot_patrol:/opt/ros/foxy'), ('CMAKE_PREFIX_PATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge:/home/user/ros2_ws/install/robot_patrol:/opt/ros/foxy'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_xterm:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/simulations/ros2_sims_ws/install/ros1_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '714870'), ('SLOT_PREFIX', 'be34aeeb-4fc9-4b76-bf3f-f1d6fb7883af'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25184'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/foxy/bin:/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'foxy'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin'), ('NODE_VERSION', 'v6.11.2'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'foxy'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[9.533693] (-) TimerEvent: {}
+[9.601774] (robot_patrol) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target patrol_node\x1b[0m\n'}
+[9.633861] (-) TimerEvent: {}
+[9.680541] (robot_patrol) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/patrol_node.dir/src/patrol.cpp.o\x1b[0m\n'}
+[9.734053] (-) TimerEvent: {}
+[9.834564] (-) TimerEvent: {}
+[9.935024] (-) TimerEvent: {}
+[10.035596] (-) TimerEvent: {}
+[10.136326] (-) TimerEvent: {}
+[10.237034] (-) TimerEvent: {}
+[10.337504] (-) TimerEvent: {}
+[10.438014] (-) TimerEvent: {}
+[10.538436] (-) TimerEvent: {}
+[10.638876] (-) TimerEvent: {}
+[10.739311] (-) TimerEvent: {}
+[10.839837] (-) TimerEvent: {}
+[10.940348] (-) TimerEvent: {}
+[11.041209] (-) TimerEvent: {}
+[11.142108] (-) TimerEvent: {}
+[11.242610] (-) TimerEvent: {}
+[11.343073] (-) TimerEvent: {}
+[11.443658] (-) TimerEvent: {}
+[11.544417] (-) TimerEvent: {}
+[11.644902] (-) TimerEvent: {}
+[11.745627] (-) TimerEvent: {}
+[11.846079] (-) TimerEvent: {}
+[11.946518] (-) TimerEvent: {}
+[12.047011] (-) TimerEvent: {}
+[12.147486] (-) TimerEvent: {}
+[12.251877] (-) TimerEvent: {}
+[12.352818] (-) TimerEvent: {}
+[12.453308] (-) TimerEvent: {}
+[12.554494] (-) TimerEvent: {}
+[12.656482] (-) TimerEvent: {}
+[12.756965] (-) TimerEvent: {}
+[12.857397] (-) TimerEvent: {}
+[12.957907] (-) TimerEvent: {}
+[13.058986] (-) TimerEvent: {}
+[13.160054] (-) TimerEvent: {}
+[13.260556] (-) TimerEvent: {}
+[13.361015] (-) TimerEvent: {}
+[13.461627] (-) TimerEvent: {}
+[13.562188] (-) TimerEvent: {}
+[13.662612] (-) TimerEvent: {}
+[13.763016] (-) TimerEvent: {}
+[13.864663] (-) TimerEvent: {}
+[13.965155] (-) TimerEvent: {}
+[14.065656] (-) TimerEvent: {}
+[14.166074] (-) TimerEvent: {}
+[14.266511] (-) TimerEvent: {}
+[14.367102] (-) TimerEvent: {}
+[14.467614] (-) TimerEvent: {}
+[14.568076] (-) TimerEvent: {}
+[14.668457] (-) TimerEvent: {}
+[14.768885] (-) TimerEvent: {}
+[14.869377] (-) TimerEvent: {}
+[14.969871] (-) TimerEvent: {}
+[15.070345] (-) TimerEvent: {}
+[15.171609] (-) TimerEvent: {}
+[15.272178] (-) TimerEvent: {}
+[15.372614] (-) TimerEvent: {}
+[15.473089] (-) TimerEvent: {}
+[15.574059] (-) TimerEvent: {}
+[15.674600] (-) TimerEvent: {}
+[15.775173] (-) TimerEvent: {}
+[15.876064] (-) TimerEvent: {}
+[15.976586] (-) TimerEvent: {}
+[16.077091] (-) TimerEvent: {}
+[16.177606] (-) TimerEvent: {}
+[16.278080] (-) TimerEvent: {}
+[16.378565] (-) TimerEvent: {}
+[16.479077] (-) TimerEvent: {}
+[16.579965] (-) TimerEvent: {}
+[16.680821] (-) TimerEvent: {}
+[16.781388] (-) TimerEvent: {}
+[16.881875] (-) TimerEvent: {}
+[16.982537] (-) TimerEvent: {}
+[17.083124] (-) TimerEvent: {}
+[17.183614] (-) TimerEvent: {}
+[17.284073] (-) TimerEvent: {}
+[17.384465] (-) TimerEvent: {}
+[17.485343] (-) TimerEvent: {}
+[17.586347] (-) TimerEvent: {}
+[17.686855] (-) TimerEvent: {}
+[17.787355] (-) TimerEvent: {}
+[17.889126] (-) TimerEvent: {}
+[17.989541] (-) TimerEvent: {}
+[18.090013] (-) TimerEvent: {}
+[18.190496] (-) TimerEvent: {}
+[18.291364] (-) TimerEvent: {}
+[18.391802] (-) TimerEvent: {}
+[18.411822] (robot_patrol) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable patrol_node\x1b[0m\n'}
+[18.491972] (-) TimerEvent: {}
+[18.592944] (-) TimerEvent: {}
+[18.693434] (-) TimerEvent: {}
+[18.793961] (-) TimerEvent: {}
+[18.835484] (robot_patrol) StdoutLine: {'line': b'[100%] Built target patrol_node\n'}
+[18.856272] (robot_patrol) CommandEnded: {'returncode': 0}
+[18.894156] (-) TimerEvent: {}
+[18.989960] (robot_patrol) JobProgress: {'identifier': 'robot_patrol', 'progress': 'install'}
+[18.994357] (-) TimerEvent: {}
+[19.024802] (robot_patrol) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/user/ros2_ws/src/build/robot_patrol'], 'cwd': '/home/user/ros2_ws/src/build/robot_patrol', 'env': OrderedDict([('ROS_VERSION', '2'), ('NVIDIA_VISIBLE_DEVICES', 'all'), ('GAZEBO_MASTER_URI', 'http://1_xterm:11345'), ('ROS_PYTHON_VERSION', '3'), ('HOSTNAME', '1_xterm'), ('NVIDIA_REQUIRE_CUDA', 'cuda>=11.1 brand=tesla,driver>=418,driver<419 brand=tesla,driver>=440,driver<441 brand=tesla,driver>=450,driver<451'), ('NCCL_VERSION', '2.7.8'), ('PWD', '/home/user/ros2_ws/src/build/robot_patrol'), ('PORT', '4000'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('ROS_IP', ''), ('HOME', '/home/user'), ('GAZEBO_PLUGIN_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('CUDA_VERSION', '11.1.1'), ('AMENT_PREFIX_PATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge:/home/user/ros2_ws/install/robot_patrol:/opt/ros/foxy'), ('CMAKE_PREFIX_PATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge:/home/user/ros2_ws/install/robot_patrol:/opt/ros/foxy'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11:/usr/share/gazebo-11:/usr/share/gazebo'), ('COLCON_PREFIX_PATH', '/home/user/ros2_ws/install:/home/simulations/ros2_sims_ws/install'), ('GAZEBO_MASTER_PORT', '11345'), ('NVM_DIR', '/usr/local/share/shell/.nvm'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PYTHONPATH', '/home/simulations/ros2_sims_ws/install/ros1_bridge/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('TERM', 'xterm-color'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('SNAPCRAFT_BUILD_ENVIRONMENT', 'host'), ('GAZEBO_MASTER_HOSTNAME', '1_xterm'), ('LIBRARY_PATH', '/usr/local/cuda/lib64/stubs'), ('DISPLAY', ':1'), ('SHLVL', '2'), ('NVM_CD_FLAGS', ''), ('ROS_MASTER_URI', 'http://1_xterm:11311'), ('ROS_HOSTNAME', '1_xterm'), ('LD_LIBRARY_PATH', '/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/home/simulations/ros2_sims_ws/install/ros1_bridge/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib:/usr/local/cuda-10.2/lib64:/home/user/.catkin_ws_python3/src/TensorRT-7.0.0.11/lib:/usr/local/nvidia/lib:/usr/local/nvidia/lib64:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins'), ('ROS_LOCALHOST_ONLY', '0'), ('SLOT_SHELL_START_ID', '714870'), ('SLOT_PREFIX', 'be34aeeb-4fc9-4b76-bf3f-f1d6fb7883af'), ('LC_ALL', 'C'), ('SOURCE_ROS1_WS', ''), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/models:/usr/share/gazebo-11/models:/usr/share/gazebo-9/models:/usr/share/gazebo/models_robox'), ('SLOT_JENKINS_PORT', '25184'), ('SLOT_SYSTEMD', 'False'), ('PATH', '/opt/ros/foxy/bin:/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin:/usr/local/nvidia/bin:/usr/local/cuda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/user/.cargo/bin:/home/user/.cargo/bin'), ('SELECTED_ROS_DISTRO', 'foxy'), ('NVM_BIN', '/usr/local/share/shell/.nvm/versions/node/v6.11.2/bin'), ('NODE_VERSION', 'v6.11.2'), ('DEBIAN_FRONTEND', 'noninteractive'), ('ROS_DISTRO', 'foxy'), ('GAZEBO_VERBOSE', '0'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('OLDPWD', '/home/user/ros2_ws'), ('SOURCE_ROS2_WS', 'True'), ('SLOT_ROSBRIDGE_PORT', '20001'), ('_', '/usr/bin/env')]), 'shell': False}
+[19.045890] (robot_patrol) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.047262] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/lib/robot_patrol/patrol_node\n'}
+[19.054151] (robot_patrol) StdoutLine: {'line': b'-- Set runtime path of "/home/user/ros2_ws/src/install/robot_patrol/lib/robot_patrol/patrol_node" to ""\n'}
+[19.054754] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol//launch\n'}
+[19.055659] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol//launch/start_patrolling.launch.py\n'}
+[19.056641] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/ament_index/resource_index/package_run_dependencies/robot_patrol\n'}
+[19.057429] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/ament_index/resource_index/parent_prefix_path/robot_patrol\n'}
+[19.057782] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.sh\n'}
+[19.058059] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/ament_prefix_path.dsv\n'}
+[19.058473] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/path.sh\n'}
+[19.058871] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/environment/path.dsv\n'}
+[19.059233] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.bash\n'}
+[19.059528] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.sh\n'}
+[19.059793] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.zsh\n'}
+[19.060096] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/local_setup.dsv\n'}
+[19.060419] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/package.dsv\n'}
+[19.060738] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/ament_index/resource_index/packages/robot_patrol\n'}
+[19.061025] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig.cmake\n'}
+[19.061289] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/cmake/robot_patrolConfig-version.cmake\n'}
+[19.061586] (robot_patrol) StdoutLine: {'line': b'-- Installing: /home/user/ros2_ws/src/install/robot_patrol/share/robot_patrol/package.xml\n'}
+[19.064181] (robot_patrol) CommandEnded: {'returncode': 0}
+[19.094738] (-) TimerEvent: {}
+[19.195578] (-) TimerEvent: {}
+[19.220171] (robot_patrol) JobEnded: {'identifier': 'robot_patrol', 'rc': 0}
+[19.221575] (-) EventReactorShutdown: {}
