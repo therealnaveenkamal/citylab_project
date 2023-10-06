@@ -37,7 +37,7 @@ private:
       } else if (right > oth) {
         RCLCPP_INFO(this->get_logger(), "Turning Right: '%f'", right);
         velocity.linear.x = -0.1;
-        velocity.angular.z = 0.1;
+        velocity.angular.z = -0.1;
         vPubs->publish(velocity);
       } else {
         RCLCPP_INFO(this->get_logger(), "Reverse: '%f'", front);
