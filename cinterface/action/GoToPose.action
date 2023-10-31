@@ -1,0 +1,5 @@
+geometry_msgs/Pose2D goal_pos
+---
+bool status
+---
+geometry_msgs/Pose2D current_pos

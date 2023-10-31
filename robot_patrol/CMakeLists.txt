@@ -21,6 +21,10 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
+find_package(cinterface REQUIRED)
+find_package(nav_msgs REQUIRED)
+find_package(tf2 REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 
 
 if(BUILD_TESTING)
@@ -34,10 +38,28 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-
+add_executable(direction_server_node src/direction_service.cpp)
+ament_target_dependencies(direction_server_node rclcpp std_msgs sensor_msgs geometry_msgs cinterface)
 
 add_executable(patrol_node src/patrol.cpp)
-ament_target_dependencies(patrol_node rclcpp std_msgs sensor_msgs geometry_msgs)
+ament_target_dependencies(patrol_node rclcpp std_msgs sensor_msgs geometry_msgs cinterface)
+
+
+add_executable(pose_server_node src/go_to_pose_action.cpp)
+ament_target_dependencies(pose_server_node rclcpp rclcpp_action cinterface geometry_msgs nav_msgs tf2 tf2_geometry_msgs)
+
+install(TARGETS
+   pose_server_node
+   DESTINATION lib/${PROJECT_NAME}
+ )
+
+
+
+
+install(TARGETS
+   direction_server_node
+   DESTINATION lib/${PROJECT_NAME}
+ )
 
 install(TARGETS
    patrol_node
