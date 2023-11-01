@@ -32,25 +32,42 @@ private:
       float angle = request->laser_data.angle_min +
                     i * request->laser_data.angle_increment;
 
-      if (angle <= 1.57 && angle >= 0.524) {
+      if (angle <= 1.57079633 && angle > 0.523598776) {
         total_dist_sec_left += request->laser_data.ranges[i];
-      } else if (angle < 0.524 && angle >= -0.524) {
+      } else if (angle <= 0.523598776 && angle > -0.523598776) {
         total_dist_sec_front += request->laser_data.ranges[i];
-      } else if (angle < -0.524 && angle >= -1.57) {
+      } else if (angle <= -0.523598776 && angle > -1.57079633) {
         total_dist_sec_right += request->laser_data.ranges[i];
       }
     }
 
-    if (total_dist_sec_front > total_dist_sec_left &&
-        total_dist_sec_front > total_dist_sec_right) {
+    RCLCPP_INFO(this->get_logger(), "LEFT: %f", total_dist_sec_left / 120);
+    RCLCPP_INFO(this->get_logger(), "FRONT: %f", total_dist_sec_front / 120);
+    RCLCPP_INFO(this->get_logger(), "RIGHT: %f", total_dist_sec_right / 120);
 
+    if (total_dist_sec_front / 120 >= 1) {
       response->direction = "forward";
-    } else if (total_dist_sec_right > total_dist_sec_left &&
-               total_dist_sec_right > total_dist_sec_front) {
-
-      response->direction = "right";
     } else {
-      response->direction = "left";
+
+      if (total_dist_sec_front / 120 < 0.8 && total_dist_sec_left / 120 < 0.8) {
+        response->direction = "reverse-left";
+      } else if (total_dist_sec_front / 120 < 0.8 &&
+                 total_dist_sec_right / 120 < 0.8) {
+        response->direction = "reverse-right";
+      } else {
+        if (total_dist_sec_front > total_dist_sec_left &&
+            total_dist_sec_front > total_dist_sec_right) {
+
+          response->direction = "forward";
+        } else if (total_dist_sec_right > total_dist_sec_left &&
+                   total_dist_sec_right > total_dist_sec_front) {
+
+          response->direction = "right";
+        } else if (total_dist_sec_left > total_dist_sec_right &&
+                   total_dist_sec_left > total_dist_sec_front) {
+          response->direction = "left";
+        }
+      }
     }
   }
 };

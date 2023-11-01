@@ -77,6 +77,18 @@ private:
         velocity.linear.x = 0.1;
         velocity.angular.z = -0.5;
         vPubs->publish(velocity);
+      } else if (result->direction == "reverse-left") {
+
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Service returned reverse");
+        velocity.linear.x = -0.1;
+        velocity.angular.z = -0.5;
+        vPubs->publish(velocity);
+      } else if (result->direction == "reverse-right") {
+
+        RCLCPP_INFO(rclcpp::get_logger("rclcpp"), "Service returned reverse");
+        velocity.linear.x = -0.1;
+        velocity.angular.z = 0.5;
+        vPubs->publish(velocity);
       }
       return 0;
     } else {
