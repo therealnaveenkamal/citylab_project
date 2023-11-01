@@ -30,14 +30,14 @@ public:
     odom_subscription = create_subscription<nav_msgs::msg::Odometry>(
         "/odom", 10, std::bind(&GoToPose::odomCallback, this, _1));
 
-    Kp_ = 0.4;
-    Ki_ = 0.02;
-    Kd_ = 0.22;
+    Kp_ = 0.45;
+    Ki_ = 0.01;
+    Kd_ = 0.1;
     prev_error_ = 0;
     int_error_ = 0;
 
-    MAX_LINEAR_SPEED = 0.08;
-    MAX_ANGULAR_SPEED = 0.65;
+    MAX_LINEAR_SPEED = 0.1;
+    MAX_ANGULAR_SPEED = 0.5;
   }
 
 private:
@@ -71,11 +71,12 @@ private:
   rclcpp_action::CancelResponse
   handle_cancel(const std::shared_ptr<GoalHandleMove> goal_handle) {
     RCLCPP_INFO(this->get_logger(), "Cancelling goal");
-    (void)goal_handle;
+
     geometry_msgs::msg::Twist stopbot;
     stopbot.linear.x = 0.0;
     stopbot.angular.z = 0.0;
     publisher_->publish(stopbot);
+    (void)goal_handle;
     return rclcpp_action::CancelResponse::ACCEPT;
   }
 
@@ -93,7 +94,7 @@ private:
     auto &feedback_data = feedback->current_pos;
 
     rclcpp::Rate loop_rate(10);
-    double tolerance = 0.1;
+    double tolerance = 0.05;
 
     while (rclcpp::ok()) {
       double current_x = current_pos_.x;
@@ -113,12 +114,39 @@ private:
                                  std::pow(desired_y - current_y, 2));
 
       if (d_error <= tolerance) {
-        result->status = "Goal achieved.";
+        result->status = "Linear Goal achieved.";
         move.linear.x = 0.0;
-        move.angular.z = 0.0;
-        publisher_->publish(move);
-        goal_handle->succeed(result);
-        RCLCPP_INFO(this->get_logger(), "Goal achieved");
+
+        while (rclcpp::ok()) {
+          double angle_only_err = goal->goal_pos.theta * (M_PI / 180.0) - current_pos_.theta;
+
+          RCLCPP_INFO(this->get_logger(), "Angle Error: %f", angle_only_err);
+          RCLCPP_INFO(this->get_logger(), "act_theta: %f, req_theta: %f",
+                      current_pos_.theta, goal->goal_pos.theta * (M_PI / 180.0));
+
+          while (angle_only_err > M_PI) {
+            angle_only_err -= 2.0 * M_PI;
+          }
+          while (angle_only_err < -M_PI) {
+            angle_only_err += 2.0 * M_PI;
+          }
+
+          if (abs(angle_only_err) < 0.1) {
+            move.linear.x = 0.0;
+            move.angular.z = 0.0;
+            publisher_->publish(move);
+            goal_handle->succeed(result);
+            RCLCPP_INFO(this->get_logger(), "Goal achieved");
+            break;
+          }
+
+          double angular_speed2 = Kp_ * angle_only_err;
+          angular_speed2 = std::max(
+              -MAX_ANGULAR_SPEED, std::min(angular_speed2, MAX_ANGULAR_SPEED));
+          move.linear.x = 0.0;
+          move.angular.z = angular_speed2;
+          publisher_->publish(move);
+        }
 
         while (rclcpp::ok()) {
           loop_rate.sleep();
@@ -142,31 +170,49 @@ private:
         angular_speed = std::max(-MAX_ANGULAR_SPEED,
                                  std::min(angular_speed, MAX_ANGULAR_SPEED));
 
-        move.linear.x = MAX_LINEAR_SPEED;
+        double linear_speed =
+            std::max(0.0, std::min(d_error * 0.1, MAX_LINEAR_SPEED));
+        move.linear.x = linear_speed;
         move.angular.z = angular_speed;
-        publisher_->publish(move);
 
+        publisher_->publish(move);
         goal_handle->publish_feedback(feedback);
 
         RCLCPP_INFO(this->get_logger(), "Error: %f", d_error);
-        RCLCPP_INFO(this->get_logger(), "x: %f, y: %f", current_x, current_y);
+        RCLCPP_INFO(this->get_logger(), "x: %f, y: %f, theta: %f", current_x,
+                    current_y, current_pos_.theta);
       }
 
       loop_rate.sleep();
     }
   }
 
+  /*
+    void odomCallback(const nav_msgs::msg::Odometry::SharedPtr msg) {
+      double x = msg->pose.pose.position.x;
+      double y = msg->pose.pose.position.y;
+
+      tf2::Quaternion orientation;
+      tf2::fromMsg(msg->pose.pose.orientation, orientation);
+      double roll, pitch, yaw;
+      tf2::Matrix3x3(orientation).getRPY(roll, pitch, yaw);
+
+      current_pos_.x = x;
+      current_pos_.y = y;
+      current_pos_.theta = yaw;
+    }
+    */
+
   void odomCallback(const nav_msgs::msg::Odometry::SharedPtr msg) {
-    double x = msg->pose.pose.position.x;
-    double y = msg->pose.pose.position.y;
-
-    tf2::Quaternion orientation;
-    tf2::fromMsg(msg->pose.pose.orientation, orientation);
+    tf2::Quaternion q(
+        msg->pose.pose.orientation.x, msg->pose.pose.orientation.y,
+        msg->pose.pose.orientation.z, msg->pose.pose.orientation.w);
+    tf2::Matrix3x3 m(q);
     double roll, pitch, yaw;
-    tf2::Matrix3x3(orientation).getRPY(roll, pitch, yaw);
+    m.getRPY(roll, pitch, yaw);
 
-    current_pos_.x = x;
-    current_pos_.y = y;
+    current_pos_.x = msg->pose.pose.position.x;
+    current_pos_.y = msg->pose.pose.position.y;
     current_pos_.theta = yaw;
   }
 };

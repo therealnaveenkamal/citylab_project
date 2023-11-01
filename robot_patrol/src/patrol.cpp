@@ -97,41 +97,6 @@ private:
 
       return 0;
     }
-
-    /*
-
-
-        if (front < oth) {
-          if (right > oth || left > oth) {
-            RCLCPP_INFO(this->get_logger(), "Turning Right: '%f'", right);
-
-            if (std::isinf(right)) {
-              RCLCPP_INFO(this->get_logger(), "Reverse: '%f'", right);
-              velocity.linear.x = 0;
-              velocity.angular.z = -0.5;
-              vPubs->publish(velocity);
-            }
-
-            velocity.linear.x = 0;
-            velocity.angular.z = -0.5;
-            vPubs->publish(velocity);
-          } else if (right < 0.15) {
-            velocity.linear.x = -0.1;
-            velocity.angular.z = -0.5;
-            vPubs->publish(velocity);
-          } else {
-            RCLCPP_INFO(this->get_logger(), "Reverse: '%f'", front);
-            velocity.linear.x = -0.1;
-            velocity.angular.z = -0.1;
-            vPubs->publish(velocity);
-          }
-        } else {
-          velocity.linear.x = 0.2;
-          velocity.angular.z = 0.0;
-          vPubs->publish(velocity);
-        }
-
-        */
   }
 
   void controlLoop() {}
