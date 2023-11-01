@@ -30,8 +30,14 @@ public:
     odom_subscription = create_subscription<nav_msgs::msg::Odometry>(
         "/odom", 10, std::bind(&GoToPose::odomCallback, this, _1));
 
-    MAX_LINEAR_SPEED = 0.2;
-    MAX_ANGULAR_SPEED = 0.5;
+    Kp_ = 0.4;
+    Ki_ = 0.02;
+    Kd_ = 0.22;
+    prev_error_ = 0;
+    int_error_ = 0;
+
+    MAX_LINEAR_SPEED = 0.08;
+    MAX_ANGULAR_SPEED = 0.65;
   }
 
 private:
@@ -41,6 +47,12 @@ private:
   rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_subscription;
   geometry_msgs::msg::Pose2D desired_pos_ = geometry_msgs::msg::Pose2D();
   geometry_msgs::msg::Pose2D current_pos_ = geometry_msgs::msg::Pose2D();
+
+  double Kp_;
+  double Ki_;
+  double Kd_;
+  double prev_error_;
+  double int_error_;
 
   double MAX_LINEAR_SPEED;
   double MAX_ANGULAR_SPEED;
@@ -71,20 +83,6 @@ private:
     using namespace std::placeholders;
     std::thread{std::bind(&GoToPose::execute, this, _1), goal_handle}.detach();
   }
-
-  /*
-    void handle_feedback(const std::shared_ptr<GoalHandleMove> goal_handle,
-                         const std::shared_ptr<GTP::Feedback> feedback) {
-      auto &feedback_data = feedback->current_pos;
-      double current_x = current_pos_.x;
-      double current_y = current_pos_.y;
-      double current_theta = current_pos_.theta;
-
-      feedback_data.x = current_x;
-      feedback_data.y = current_y;
-      feedback_data.theta = current_theta;
-    }
-    */
 
   void execute(const std::shared_ptr<GoalHandleMove> goal_handle) {
     RCLCPP_INFO(this->get_logger(), "Executing goal");
@@ -117,9 +115,14 @@ private:
       if (d_error <= tolerance) {
         result->status = "Goal achieved.";
         move.linear.x = 0.0;
+        move.angular.z = 0.0;
         publisher_->publish(move);
         goal_handle->succeed(result);
         RCLCPP_INFO(this->get_logger(), "Goal achieved");
+
+        while (rclcpp::ok()) {
+          loop_rate.sleep();
+        }
       } else {
         double tan_inverse = atan2(dy, dx);
         double a_error = tan_inverse - current_pos_.theta;
@@ -131,7 +134,10 @@ private:
           a_error += 2 * 3.145;
         }
 
-        double angular_speed = 0.5 * a_error;
+        double angular_speed =
+            Kp_ * a_error + Ki_ * int_error_ + Kd_ * (a_error - prev_error_);
+        prev_error_ = a_error;
+        int_error_ += a_error;
 
         angular_speed = std::max(-MAX_ANGULAR_SPEED,
                                  std::min(angular_speed, MAX_ANGULAR_SPEED));
@@ -172,8 +178,9 @@ int main(int argc, char **argv) {
 
   rclcpp::executors::MultiThreadedExecutor executor;
   executor.add_node(action_server);
-  executor.spin();
 
-  rclcpp::shutdown();
+  std::thread executor_thread([&executor]() { executor.spin(); });
+  executor_thread.join();
+
   return 0;
 }

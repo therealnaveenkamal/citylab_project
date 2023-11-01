@@ -50,7 +50,7 @@ private:
 
       response->direction = "right";
     } else {
-      response->direction = "right";
+      response->direction = "left";
     }
   }
 };

@@ -48,12 +48,19 @@ ament_target_dependencies(patrol_node rclcpp std_msgs sensor_msgs geometry_msgs 
 add_executable(pose_server_node src/go_to_pose_action.cpp)
 ament_target_dependencies(pose_server_node rclcpp rclcpp_action cinterface geometry_msgs nav_msgs tf2 tf2_geometry_msgs)
 
+add_executable(patrol_test_node src/test_service.cpp)
+ament_target_dependencies(patrol_test_node rclcpp std_msgs sensor_msgs geometry_msgs cinterface)
+
+
 install(TARGETS
    pose_server_node
    DESTINATION lib/${PROJECT_NAME}
  )
 
-
+install(TARGETS
+   patrol_test_node
+   DESTINATION lib/${PROJECT_NAME}
+ )
 
 
 install(TARGETS
